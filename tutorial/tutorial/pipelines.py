@@ -24,16 +24,15 @@ class ProxyPipeline(object):
     
     def open_spider(self, spider):
         """打开爬虫时做的事"""
-
-        self.file = open("proxy_json.json", "a")
+        self.file = open("proxy_josn.json", "a")
         # 写日志
-        spider.logger.info("A jsonFile open")
+        spider.logger.info("打开JSON文件准备写入！")
         
-    def close_spder(self, spider):
+    def close_spider(self, spider):
         """关闭爬虫时做的事"""
         self.file.close() # 关闭写文件
         # 写日志
-        spider.logger.info("A jsonFile closed")
+        spider.logger.info("写入完毕关闭JSON文件！")
         
     def process_item(self, item, spider):
         """处理每个实体项目"""
@@ -45,7 +44,7 @@ class ProxyPipeline(object):
         
         self.proxy_set.add(item)
         # 写进文件
-        line = json.dumps(adapter_item.asdict()) + "\n"
+        line = json.dumps(adapter_item.asdict()) + ",\n"
         self.file.write(line)
         return item  # 返回该项目
     

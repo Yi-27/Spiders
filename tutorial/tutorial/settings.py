@@ -16,10 +16,10 @@ NEWSPIDER_MODULE = 'tutorial.spiders'  # 爬虫模块名
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'tutorial (+http://www.yourdomain.com)'
 # 用户头
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36 Edg/87.0.664.4"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True  # 是否遵守robots
+ROBOTSTXT_OBEY = False  # 是否遵守robots
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32  # 并发请求，默认为32个
@@ -55,9 +55,6 @@ ROBOTSTXT_OBEY = True  # 是否遵守robots
 #DOWNLOADER_MIDDLEWARES = {
 #    'tutorial.middlewares.TutorialDownloaderMiddleware': 543,
 #}
-
-# 使用之前在http://www.xicidaili.com/网站爬取到的代理
-# HTTPPROXY_PROXY_LIST_FILE = 'proxy_list0.json'
 
 
 # Enable or disable extensions  # 扩展相关
@@ -103,3 +100,15 @@ ITEM_PIPELINES = {
 # FEED_EXPORTERS = {
 # 	'excel':'example.my_exporters.ExcelItemExporter',
 # }
+DOWNLOAD_DELAY=2  # 固定延时2秒
+# RANDOMIZE_DOWNLOAD_DELAY=True  # 随机的延迟时间
+
+# 下载中间件
+# DOWNLOADER_MIDDLEWARES = {
+    # 置于HttpProxyMiddleware(750)之前
+    # 'tutorial.middlewares.RandomHttpProxyMiddleware':745,
+    # 'tutorial.middlewares.ProxyMiddleware':745,
+# }
+
+# 使用之前在http://www.xicidaili.com/网站爬取到的代理
+HTTPPROXY_PROXY_LIST_FILE = 'proxy.json'

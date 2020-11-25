@@ -8,6 +8,86 @@ from scrapy import signals
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
 
+from scrapy.downloadermiddlewares.httpproxy import HttpProxyMiddleware
+from collections import defaultdict
+import json
+import random
+
+
+# 随机选取代理的下载中间件
+class RandomHttpProxyMiddleware(HttpProxyMiddleware):
+
+    def __init__(self,auth_encoding='latin-1',proxy_list_file=None):
+        if not proxy_list_file:
+            # raise NotConfigured
+            pass
+
+        self.auth_encoding = auth_encoding  # 编码，默认时latin-1 ISO-8859-1
+        # 分别用两个列表维护HTTP和HTTPS的代理，{'http':[...],'https':[...]}
+        self.proxies = defaultdict(list)  # 初始化dict_list
+
+
+        # 从json文件中读取代理服务器信息，填入self.proxies
+        with open(proxy_list_file) as f:
+            proxy_list = json.load(f)
+            for proxy in proxy_list:
+                scheme = proxy['scheme']  # http 或 https
+                url = '%s://%s:%s' % (scheme, proxy["ip"], proxy["port"])  # "http://110.52.235.158:9999"
+                self.proxies[scheme].append(self._get_proxy(url,scheme))  # 按种类添加
+
+
+    @classmethod
+    def from_crawler(cls,crawler):  # 开始爬虫时
+        # 从配置文件中读取用户验证信息的编码
+        auth_encoding = crawler.settings.get('HTTPPROXY_AUTH_ENCODING','latin-1')
+
+        # 从配置文件中读取代理服务器列表文件(json)的路径
+        proxy_list_file = crawler.settings.get('HTTPPROXY_PROXY_LIST_FILE')
+
+        return cls(auth_encoding,proxy_list_file)
+
+
+    def _set_proxy(self,request,scheme):
+        # 随机选择一个代理
+        creds,proxy = random.choice(self.proxies[scheme])
+        request.meta['proxy'] = proxy  # 设置代理  爬虫时回自动使用这个中间件
+        if creds:
+            request.headers['Proxy-Authorization'] = b'Basic' + creds
+
+
+
+class ProxyMiddleware(object):
+    # 设置Proxy
+    def __init__(self, proxy_list_file=None):
+        self.ip = []  # 初始化dict_list
+
+        # 从json文件中读取代理服务器信息，填入self.proxies
+        with open(proxy_list_file) as f:
+            proxy_list = json.load(f)
+            for proxy in proxy_list:
+                scheme = proxy['scheme']  # http 或 https
+                url = '%s://%s:%s' % (scheme, proxy["ip"], proxy["port"])  # "http://110.52.235.158:9999"
+                self.ip.append(url)  # 按种类添加
+        print(self.ip)
+        
+    @classmethod
+    def from_crawler(cls, crawler):
+        # 从配置文件中读取代理服务器列表文件(json)的路径
+        proxy_list_file = crawler.settings.get('HTTPPROXY_PROXY_LIST_FILE')
+        
+        return cls(proxy_list_file)
+    
+    def process_request(self, request, spider):
+        ip = random.choice(self.ip)
+        request.meta['proxy'] = ip
+
+
+
+
+
+
+
+
 
 class TutorialSpiderMiddleware:
     # Not all methods need to be defined. If a method is not defined,

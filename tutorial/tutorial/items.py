@@ -14,7 +14,8 @@ class ProxyItem(Item):
     # 这个实体的两个属性
     ip = Field()
     port = Field()
-    time = Field()
+    scheme = Field()  # http/https
+    # time = Field()
 
 class TutorialItem(scrapy.Item):
     # define the fields for your item here like:
