@@ -56,6 +56,7 @@ class RandomHttpProxyMiddleware(HttpProxyMiddleware):
 
 
 
+# 随机代理
 class ProxyMiddleware(object):
     # 设置Proxy
     def __init__(self, proxy_list_file=None):
@@ -78,11 +79,21 @@ class ProxyMiddleware(object):
         return cls(proxy_list_file)
     
     def process_request(self, request, spider):
+        """在爬虫执行前会调用该方法"""
         ip = random.choice(self.ip)
         request.meta['proxy'] = ip
 
 
-
+class RotateUserAgentMiddleware(object):
+    
+    def __init__(self):
+        self._ua = [
+        
+        ]
+    
+    def process_request(self, request, spider):
+        # 设置随机的UA
+        request.headers["User-Agent"] = random.choice(self._ua)
 
 
 

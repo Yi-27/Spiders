@@ -1,0 +1,13 @@
+[
+{"hushen": ["pz=4237", "fs=m:0+t:6,m:0+t:13,m:0+t:80,m:1+t:2,m:1+t:23"]},
+{"shangzheng": ["pz=1838", "fs=m:1+t:2,m:1+t:23"]},
+{"shenzheng": ["pz=2399", "fs=m:0+t:6,m:0+t:13,m:0+t:80"]},
+{"xingu": ["pz=357", "fs=m:0+f:8,m:1+f:8"]},
+{"zhongxiaoban": ["pz=998", "fs=m:0+t:13"]},
+{"chuangyeban": ["pz=891", "fs=m:0+t:80"]},
+{"kechuangban": ["pz=205", "fs=m:1+t:23"]},
+{"hugutong": ["pz=582", "fs=b:BK0707"]},
+{"shengutong": ["pz=803", "fs=b:BK0804"]},
+{"Bgu": ["pz=114", "fs=m:0+t:7,m:1+t:3"]},
+{"fengxian": ["pz=215", "fs=m:0 f:4,m:1 f:4"]}
+]

@@ -70,7 +70,7 @@ ROBOTSTXT_OBEY = False  # 是否遵守robots
 #}
 # 激活管道
 ITEM_PIPELINES = {
-    "tutorial.pipelines.ProxyPipeline": 300,
+    # "tutorial.pipelines.ProxyPipeline": 300,
 }
 
 
@@ -112,3 +112,6 @@ DOWNLOAD_DELAY=2  # 固定延时2秒
 
 # 使用之前在http://www.xicidaili.com/网站爬取到的代理
 HTTPPROXY_PROXY_LIST_FILE = 'proxy.json'
+
+# 行情中心的配置
+CENTER_LIST_FILE = 'center.json'
