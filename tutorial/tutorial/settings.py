@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'tutorial.spiders'  # 爬虫模块名
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'tutorial (+http://www.yourdomain.com)'
 # 用户头
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36 Edg/87.0.664.4"
+# USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36 Edg/87.0.664.4"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False  # 是否遵守robots
@@ -68,10 +68,6 @@ ROBOTSTXT_OBEY = False  # 是否遵守robots
 #ITEM_PIPELINES = {
 #    'tutorial.pipelines.TutorialPipeline': 300,
 #}
-# 激活管道
-ITEM_PIPELINES = {
-    # "tutorial.pipelines.ProxyPipeline": 300,
-}
 
 
 
@@ -100,15 +96,25 @@ ITEM_PIPELINES = {
 # FEED_EXPORTERS = {
 # 	'excel':'example.my_exporters.ExcelItemExporter',
 # }
+
 DOWNLOAD_DELAY=2  # 固定延时2秒
 # RANDOMIZE_DOWNLOAD_DELAY=True  # 随机的延迟时间
 
 # 下载中间件
-# DOWNLOADER_MIDDLEWARES = {
+DOWNLOADER_MIDDLEWARES = {
     # 置于HttpProxyMiddleware(750)之前
     # 'tutorial.middlewares.RandomHttpProxyMiddleware':745,
-    # 'tutorial.middlewares.ProxyMiddleware':745,
-# }
+    # 'tutorial.middlewares.ProxyMiddleware':745,  # 随机代理中间件
+    "tutorial.middlewares.RandomUserAgentMiddleware": 380,  # 随机UA中间件
+}
+
+# 激活管道
+ITEM_PIPELINES = {
+    # "tutorial.pipelines.ProxyPipeline": 300,
+}
+
+
+"""以下时自定义配置"""
 
 # 使用之前在http://www.xicidaili.com/网站爬取到的代理
 HTTPPROXY_PROXY_LIST_FILE = 'proxy.json'
