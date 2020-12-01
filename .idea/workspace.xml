@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="214bd69e-433a-484d-b25c-6c0a97b4d8fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tutorial/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tutorial/tutorial/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,14 +20,16 @@
     <session id="-437688917">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.48" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -53,14 +52,14 @@
         <counts>
           <entry key="dummy" value="21" />
           <entry key="json" value="97" />
-          <entry key="py" value="8904" />
+          <entry key="py" value="8910" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="97" />
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="8904" />
+          <entry key="Python" value="8910" />
         </counts>
       </usages-collector>
     </session>
@@ -70,14 +69,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tutorial/tutorial/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="128" column="8" lean-forward="true" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="8" />
+            <state relative-caret-position="495">
+              <caret line="94" column="38" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
               <folding>
                 <element signature="e#145#171#0" expanded="true" />
-                <marker date="1606655869951" expanded="true" signature="785:4879" ph="..." />
-                <marker date="1606655869951" expanded="true" signature="1755:1765" ph="..." />
-                <marker date="1606655869951" expanded="true" signature="2083:2279" ph="..." />
-                <marker date="1606655869951" expanded="true" signature="4586:4879" ph="..." />
+                <marker date="1606804578063" expanded="true" signature="785:4876" ph="..." />
+                <marker date="1606804578063" expanded="true" signature="1755:1765" ph="..." />
               </folding>
             </state>
           </provider>
@@ -86,7 +83,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tutorial/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="984">
+            <state relative-caret-position="759">
               <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
             </state>
           </provider>
@@ -104,7 +101,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tutorial/tutorial/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2736">
+            <state relative-caret-position="759">
               <caret line="114" selection-start-line="114" selection-end-line="114" />
             </state>
           </provider>
@@ -163,7 +160,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="902" />
     <option name="y" value="16" />
     <option name="width" value="993" />
@@ -340,6 +337,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="902" y="16" width="993" height="994" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.38370848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24973205" />
@@ -559,23 +557,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="128" column="8" lean-forward="true" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="8" />
-          <folding>
-            <element signature="e#145#171#0" expanded="true" />
-            <marker date="1606655869951" expanded="true" signature="785:4879" ph="..." />
-            <marker date="1606655869951" expanded="true" signature="1755:1765" ph="..." />
-            <marker date="1606655869951" expanded="true" signature="2083:2279" ph="..." />
-            <marker date="1606655869951" expanded="true" signature="4586:4879" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
+        <state relative-caret-position="759">
           <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
         </state>
       </provider>
@@ -589,8 +573,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/tutorial/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2736">
+        <state relative-caret-position="759">
           <caret line="114" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="94" column="38" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
+          <folding>
+            <element signature="e#145#171#0" expanded="true" />
+            <marker date="1606804578063" expanded="true" signature="785:4876" ph="..." />
+            <marker date="1606804578063" expanded="true" signature="1755:1765" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

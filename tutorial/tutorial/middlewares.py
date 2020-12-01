@@ -92,7 +92,7 @@ class LoginDFCFMiddleware(object):
             username.click()
             time.sleep(0.5)  # 睡0.5秒不至于执行那么快
             username.send_keys("763074310@qq.com")
-            password.send_keys("jiyou0612")
+            password.send_keys("123456")
         except Exception as e:
             print(e)
             # 出错就再试一次
