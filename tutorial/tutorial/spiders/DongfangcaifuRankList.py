@@ -54,10 +54,12 @@ class DongfangcaifuranklistSpider(scrapy.Spider):
         data_dict = json.loads(data_json)
         data = data_dict["data"]["diff"]  # 类型是[{},{},...]
 
-        # 直接用pandas转成DataFrame
+        # 直接用pandas转成DataFrame，然后存在本地
         data_pd = pd.DataFrame(data)
         data_pd.rename(columns=self.filed_name, inplace=True)
         data_pd.to_csv(f"./stocks/{response.meta['_type']}_{round(time.time())}.csv", encoding='GBK', index=False)
+        
+        
 
 
     def parse(self, response, **kwargs):

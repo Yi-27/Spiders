@@ -111,6 +111,7 @@ DOWNLOADER_MIDDLEWARES = {
 # 激活管道
 ITEM_PIPELINES = {
     # "tutorial.pipelines.ProxyPipeline": 300,
+    # "tutorial.piplines.MongoDBPipeline": 301,
 }
 
 
@@ -121,3 +122,31 @@ HTTPPROXY_PROXY_LIST_FILE = 'proxy.json'
 
 # 行情中心的配置
 CENTER_LIST_FILE = 'center.json'
+
+
+# MongoDB配置
+MONGODB_HOST = "127.0.0.1"
+MONGODB_PORT = 27017
+MONGODB_DBNAME = "dfcf"  # db数据库名：东方财富
+MONGODB_DOCNAME = "hqzx"  # collection文档名：行情中心
+
+# Redis配置
+REDIS_HOST = "127.0.0.1"
+REDIS_PORT = 6379
+
+# MySQL配置
+MYSQL_HOST = "127.0.0.1"
+MYSQL_PORT = 3306
+MYSQL_USERNAME = "root"
+MYSQL_PASSWORD = "rootroot"
+MYSQL_DBNAME = "dfcf"
+
+# Kafka配置
+KAFKA_HOSTS = [
+    "192.168.222.136:9092",
+]
+
+# Zookeeper配置
+ZOOKEEPER_HOSTS = [
+    "192.168.222.136",
+]

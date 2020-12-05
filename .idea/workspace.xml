@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="214bd69e-433a-484d-b25c-6c0a97b4d8fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tutorial/center2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial/tutorial/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tutorial/tutorial/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuRankList.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuRankList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/Dongfangcaijing.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuHQZX.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/金融类爬虫.md" beforeDir="false" afterPath="$PROJECT_DIR$/金融类爬虫.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,80 +28,125 @@
     <session id="-437688917">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.48" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="1" />
-          <entry key="json" value="17" />
-          <entry key="py" value="59" />
+          <entry key="json" value="23" />
+          <entry key="py" value="75" />
           <entry key="pyi" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="17" />
+          <entry key="JSON" value="23" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="59" />
+          <entry key="Python" value="75" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="21" />
-          <entry key="json" value="97" />
-          <entry key="py" value="8910" />
+          <entry key="dummy" value="44" />
+          <entry key="json" value="132" />
+          <entry key="py" value="16513" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="97" />
-          <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="8910" />
+          <entry key="JSON" value="132" />
+          <entry key="PLAIN_TEXT" value="44" />
+          <entry key="Python" value="16513" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Spiders" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorial/tutorial/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#33#56#0" expanded="true" />
+                <marker date="1607177805578" expanded="true" signature="252:472" ph="..." />
+                <marker date="1607177805578" expanded="true" signature="1025:1095" ph="..." />
+                <marker date="1607177805578" expanded="true" signature="1350:1360" ph="..." />
+                <marker date="1607177805578" expanded="true" signature="1392:1561" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tutorial/tutorial/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="94" column="38" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
+            <state relative-caret-position="192">
+              <caret line="224" column="22" selection-start-line="224" selection-start-column="22" selection-end-line="224" selection-end-column="22" />
               <folding>
                 <element signature="e#145#171#0" expanded="true" />
-                <marker date="1606804578063" expanded="true" signature="785:4876" ph="..." />
-                <marker date="1606804578063" expanded="true" signature="1755:1765" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="856:9702" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="1842:1852" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="2061:2665" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="2160:2173" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="2789:2799" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="6011:6020" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="6294:6303" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="6672:6681" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="7975:8541" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="8639:8644" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="8639:8648" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="8902:8903" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="9045:9050" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="9045:9054" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="9288:9293" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="9288:9297" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="9436:9441" ph="..." />
+                <marker date="1607178053137" expanded="true" signature="9436:9445" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tutorial/test.py">
+        <entry file="file://$PROJECT_DIR$/tutorial/tutorial/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+            <state relative-caret-position="-2783">
+              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+              <folding>
+                <element signature="e#238#273#0" expanded="true" />
+                <marker date="1607167125391" expanded="true" signature="1576:1581" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tutorial/main.py">
+        <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuHQZX.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="-384">
+              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1607177209513" expanded="true" signature="414:3353" ph="..." />
+                <marker date="1607177209513" expanded="true" signature="1453:1462" ph="..." />
+                <marker date="1607177209513" expanded="true" signature="1453:1562" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,8 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tutorial/tutorial/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="114" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="697">
+              <caret line="150" column="22" selection-start-line="150" selection-start-column="22" selection-end-line="150" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -131,7 +184,6 @@
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/test2.py" />
         <option value="$PROJECT_DIR$/example.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/QuotesSpider.py" />
-        <option value="$PROJECT_DIR$/tutorial/tutorial/items.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/ProxySpider.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/xiladaili.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/zhimadaili.py" />
@@ -140,16 +192,21 @@
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/Zhimadaili.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/TestRandomProxySpider.py" />
         <option value="$PROJECT_DIR$/tutorial/proxy_josn.json" />
-        <option value="$PROJECT_DIR$/tutorial/tutorial/pipelines.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/ZhimadailiSpider.py" />
         <option value="$PROJECT_DIR$/tutorial/testSpider2.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/package.json" />
         <option value="$PROJECT_DIR$/tutorial/filed_name.json" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/DongfancaifuRankList.py" />
-        <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuRankList.py" />
         <option value="$PROJECT_DIR$/tutorial/main.py" />
         <option value="$PROJECT_DIR$/tutorial/test.py" />
+        <option value="$PROJECT_DIR$/tutorial/tutorial/items.py" />
+        <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/Dongfangcaijing.py" />
+        <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuRankList.py" />
+        <option value="$PROJECT_DIR$/tutorial/center2.json" />
+        <option value="$PROJECT_DIR$/tutorial/tutorial/pipelines.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/settings.py" />
+        <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuHQZX.py" />
+        <option value="$PROJECT_DIR$/tutorial/tutorial/utils.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/middlewares.py" />
       </list>
     </option>
@@ -160,10 +217,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="902" />
-    <option name="y" value="16" />
-    <option name="width" value="993" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="823" />
+    <option name="y" value="5" />
+    <option name="width" value="1084" />
     <option name="height" value="994" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -189,7 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,12 +266,25 @@
             </path>
             <path>
               <item name="Spiders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spiders" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spiders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spiders" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spiders" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,6 +295,9 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jarvis\Desktop\万德准备\Spiders\tutorial" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jarvis\Desktop\万德准备\Spiders\tutorial" />
     </key>
@@ -336,12 +408,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="902" y="16" width="993" height="994" extended-state="0" />
-    <editor active="true" />
+    <frame x="823" y="5" width="1084" height="994" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.38370848" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28710938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24973205" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.3290461" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.18980478" />
@@ -353,7 +424,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.23953488" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.23861171" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -361,29 +432,6 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38370848" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.24973205" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18980478" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.23953488" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -476,13 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/ZhimadailiSpider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/proxy2.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -507,42 +548,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/filed_name.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/Bgu_1606385269.csv" />
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuRankList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1392">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/center.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -559,7 +565,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
+        <state relative-caret-position="984">
           <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
         </state>
       </provider>
@@ -571,21 +577,127 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <folding>
+            <element signature="e#129#142#0" expanded="true" />
+            <marker date="1607147622740" expanded="true" signature="551:556" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/filed_name.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/center.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/center2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuRankList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="15" column="41" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="41" />
+          <folding>
+            <marker date="1607149232676" expanded="true" signature="2584:2590" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/ZhimadailiSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/tutorial/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="697">
+          <caret line="150" column="22" selection-start-line="150" selection-start-column="22" selection-end-line="150" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#33#56#0" expanded="true" />
+            <marker date="1607177805578" expanded="true" signature="252:472" ph="..." />
+            <marker date="1607177805578" expanded="true" signature="1025:1095" ph="..." />
+            <marker date="1607177805578" expanded="true" signature="1350:1360" ph="..." />
+            <marker date="1607177805578" expanded="true" signature="1392:1561" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuHQZX.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-384">
+          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1607177209513" expanded="true" signature="414:3353" ph="..." />
+            <marker date="1607177209513" expanded="true" signature="1453:1462" ph="..." />
+            <marker date="1607177209513" expanded="true" signature="1453:1562" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2783">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <element signature="e#238#273#0" expanded="true" />
+            <marker date="1607167125391" expanded="true" signature="1576:1581" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/tutorial/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="94" column="38" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
+        <state relative-caret-position="192">
+          <caret line="224" column="22" selection-start-line="224" selection-start-column="22" selection-end-line="224" selection-end-column="22" />
           <folding>
             <element signature="e#145#171#0" expanded="true" />
-            <marker date="1606804578063" expanded="true" signature="785:4876" ph="..." />
-            <marker date="1606804578063" expanded="true" signature="1755:1765" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="856:9702" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="1842:1852" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="2061:2665" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="2160:2173" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="2789:2799" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="6011:6020" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="6294:6303" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="6672:6681" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="7975:8541" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="8639:8644" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="8639:8648" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="8902:8903" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="9045:9050" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="9045:9054" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="9288:9293" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="9288:9297" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="9436:9441" ph="..." />
+            <marker date="1607178053137" expanded="true" signature="9436:9445" ph="..." />
           </folding>
         </state>
       </provider>
