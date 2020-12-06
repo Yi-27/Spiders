@@ -37,26 +37,19 @@ class KafkaUtils(object):
 
     def __init__(self):
         # kafka连接池
-        self.pool = [self.get_kafka() for i in range(5)]
-    
-    def __del__(self):
-        # 统一关闭连接
-        for client in self.pool:
-            client.close()
+        self.client = self.get_kafka()
     
     def get_kafka(self, *args, **kwargs):
         """创建一个kafka连接，注意这个kafka可能是个集群"""
         client = KafkaClient(hosts=",".join(KAFKA_HOSTS),
                     zookeeper_hosts=",".join(ZOOKEEPER_HOSTS))
-        self.pool.append(client)
         return client
     
     def get_topic(self, topic_name):
         """获取指定的topic连接"""
-        client = random.choice(self.pool)  # 随机选个链接
         # 判断连接是否可用
         # 返回一个同步生产者
-        return client.topics[topic_name]
+        return self.client.topics[topic_name]
     
     def get_sync_producer(self, topic_name):
         """返回一个同步生产者"""
@@ -66,7 +59,7 @@ class KafkaUtils(object):
     def get_producer(self, topic_name):
         """返回一个异步生产者"""
         topic = self.get_topic(topic_name)
-        return topic.topic.get_producer(sync=False,
+        return topic.get_producer(sync=False,
                                         delivery_reports=True,
                                         partitioner=lambda pid, key: pid[0])
     

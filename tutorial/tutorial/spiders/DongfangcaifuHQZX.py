@@ -25,7 +25,7 @@ class DongfangcaifuHQZXSpider(scrapy.Spider):
         self.settings = get_project_settings()  # 获取配置对象
         
         # 获取selenium的无窗口driver，用于之后登陆得到cookies
-        self.driver = SeleniumUtils.get_selenium()
+        # self.driver = SeleniumUtils.get_selenium()
         
         # 获取redis连接，用于存取cookies
         self.redis = DBUtils.get_redis()
@@ -49,11 +49,21 @@ class DongfangcaifuHQZXSpider(scrapy.Spider):
     
     def close(self, spider):
         """关闭各种资源"""
-        self.driver.close()
+        # self.driver.close()
         self.redis.close()
         self.mongo.close()
 
     def start_requests(self):
+        # 设置headers
+        headers = {
+            "Host": "86.push2.eastmoney.com",
+            "Connection": "keep-alive",
+            "Upgrade-Insecure-Requests": "1",
+            "Referer": "http://quote.eastmoney.com/",
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate",
+            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
+        }
     
         # 公共的请求参数
         public_params = [
@@ -67,21 +77,21 @@ class DongfangcaifuHQZXSpider(scrapy.Spider):
             "fields=f2,f3,f4,f5,f6,f7,f8,f9,f10,f12,f14,f15,f16,f17,f18,f20,f21,f23,f24,f25,f22,f11,f26",
         ]
         for p in self.__params_list:
-            cb = "cb=jQuery112404633069651159658_%s" % str(time.time()).replace(".", "")[:-4]
+            cb = "cb=jQuery112404687173426121387_%s" % str(time.time()).replace(".", "")[:-4]
             timestamp = "_=%s" % str(time.time()).replace(".", "")[:-4]
         
-            url = "http://69.push2.eastmoney.com/api/qt/clist/get?%s&%s&%s&%s"%(
+            url = "http://86.push2.eastmoney.com/api/qt/clist/get?%s&%s&%s&%s"%(
                 cb, '&'.join(public_params), '&'.join(list(p.values())[0]), timestamp
             )
             print(url)
         
             meta = {
-                "_type": "%s_%s"%(p.keys()[0], datetime.now().strftime("%Y%m%d%H%M"))  # 表示是哪类请求，比如，是沪深A股，还是上证A股，再配上时间
+                "_type": "%s_%s"%(list(p.keys())[0], datetime.now().strftime("%Y%m%d%H%M"))  # 表示是哪类请求，比如，是沪深A股，还是上证A股，再配上时间
             }
         
             # headers 和 cookies都在后续的下载中间件中添加了上了
             # 这里只要专注于 构造Request请求 就行
-            yield scrapy.Request(url, callback=self.hqzx_parse, meta=meta, dont_filter=False)  # 只爬一次
+            yield scrapy.Request(url, headers=headers, callback=self.hqzx_parse, meta=meta, dont_filter=False)  # 只爬一次
 
     def hqzx_parse(self, response, **kwargs):
         """

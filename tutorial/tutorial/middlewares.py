@@ -69,7 +69,7 @@ class HQZXHeadersMiddleware(object):
         if spider.name == "hangqingzhongxin":
             # 设置headers
             headers = {
-                "Host": "push2.eastmoney.com",
+                "Host": "86.push2.eastmoney.com",
                 "Connection": "keep-alive",
                 "Upgrade-Insecure-Requests": "1",
                 "Referer": "http://quote.eastmoney.com/",
@@ -146,18 +146,15 @@ class LoginDFCFMiddleware(object):  # 下载中间件
         
         
 # 设置cookies
-class DFCFSetCookies(object):
+class DFCFSetCookiesMiddleware(object):
     
     def process_request(self, request, spider):
         if spider.name == "hangqingzhongxin":
             redis = spider.redis
             if redis.exists("dfcfCookies"):
-                request.cookies = json.loads(redis.hgetall("dfcfCookies").decode())  # 设置cookies
+                request.cookies = json.loads(redis.get("dfcfCookies").decode())  # 设置cookies
             else:
-                cookies = {
-                
-                }
-                request.cookies = cookies  # 手动设置cookies，不一定能用
+                request.headers['Cookie'] = "qgqp_b_id=498c8ab46440318862f8757ff37ca2aa; p_origin=https%3A%2F%2Fpassport2.eastmoney.com; ct=w_B6TvJKJO7UPRJ6YKT2QUw8s2AyFzSa2XMmQaZcI8BekRAwdmJOIof9H9EAka_-MiwpNVRO-PYpnfc98NRAYBqiapknw8EQxMDXtaaFEsuOitvr3E-EHHXjQbAk3POnAge6GfwVpag8aiheONdGeiIn7g65U89CTfeMaIX3eFE; ut=FobyicMgeV7bfas_M05TDBOeyCFFs48knKwC5VBjLh4OQceJBUzUsQihFbc8gUi_5OPQwgb3yLNkDoEO-0b-qSRrv6swX_WeiFe1bMQk9dFXwUVQLPPG3AI_grbg8Kj9CS-4nHIh0D7f4atKAtC1Kmm9UwSPBCwGsdrV2HUYNkfPjiQsNg0I4czRn1MDjrZ1gv79YMZPw0XXw9nQ827repkX_joNWr0srtn_aZ2Ioo3ISdXfCAjd6JJEf35rsxI805TlXeq9EmUaL4ZFQG0d-DsNYpAaNmp8; pi=6182326063031944%3bg6182326063031944%3b%e6%97%b6%e4%b8%8d%e6%88%91%e5%be%8513%3byGhidakwmMWJe8NKgZzCwcSV%2bUie8tSW4OQ%2boskTA0fAE%2fLWthaNsq%2f9Vwka5Ypb27xTmZRMn9k83a1U8QK0CHZO6aTsi2BMxLFTi7Qt3a7k4DoC7aPRL3NOCG%2bY0oFE0ZhtqKmvbJt65gslq180jNqOugSedTxQrjeC%2f%2fNLANB3RxK2tVTQRfqM5zqHEjk%2bW76tG6k2%3bxnG03MNdfN6cj9SYk9JOElakwC8Hwm5zKsKG5Mh9xjVfIly7900UONCBn1bYa%2bAbLwc0fSety6ndiLqjhSkobik70ZPzmYOrN%2bLjWcdJCh4vhE84H4r92O79MZDN4reSrR%2fcZ2nMeXqo6Qsp9ofr88bFfULYdQ%3d%3d; uidal=6182326063031944%e6%97%b6%e4%b8%8d%e6%88%91%e5%be%8513; sid=153447085; vtpst=|; testtc=0.2904408531600091; st_si=81210525039055; st_asi=delete; st_pvi=18132808206149; st_sp=2020-12-06%2020%3A23%3A41; st_inirUrl=http%3A%2F%2Fquote.eastmoney.com%2Fcenter%2F; st_sn=3; st_psi=20201206204259824-113200301321-4620583248"  # 手动设置cookies，不一定能用
         
 
 # 下载中间件模板流程

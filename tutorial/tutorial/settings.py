@@ -106,6 +106,14 @@ DOWNLOADER_MIDDLEWARES = {
     # 'tutorial.middlewares.RandomHttpProxyMiddleware':745,
     # 'tutorial.middlewares.ProxyMiddleware':745,  # 随机代理中间件
     "tutorial.middlewares.RandomUserAgentMiddleware": 380,  # 随机UA中间件
+    # "tutorial.middlewares.HQZXHeadersMiddleware": 381,  # 设置请求头
+    "tutorial.middlewares.DFCFSetCookiesMiddleware": 382,  # 设置cookies
+}
+
+# 爬虫中间件
+SPIDER_MIDDLEWARES = {
+   'tutorial.middlewares.HQZXKafkaMiddleware': 543,
+   'tutorial.middlewares.HQZXMongoMiddleware': 544,
 }
 
 # 激活管道
