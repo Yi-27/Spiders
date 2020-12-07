@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="214bd69e-433a-484d-b25c-6c0a97b4d8fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/stocks/stocks/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/stocks/Bgu_1606385657.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/stocks/chuangyeban_1606385647.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/stocks/fengxian_1606385660.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/stocks/hugutong_1606385652.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/stocks/hushen_1606385639.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/stocks/kechuangban_1606385649.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/stocks/shangzheng_1606385639.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/stocks/shengutong_1606385655.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/stocks/shenzheng_1606385640.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/stocks/xingu_1606385641.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/stocks/zhongxiaoban_1606385644.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tutorial/tutorial/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/middlewares.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tutorial/tutorial/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuHQZX.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuHQZX.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/tutorial/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/金融类爬虫.md" beforeDir="false" afterPath="$PROJECT_DIR$/金融类爬虫.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,24 +23,25 @@
     <session id="-437688917">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="3" />
+          <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="1" />
           <entry key="json" value="23" />
-          <entry key="py" value="77" />
+          <entry key="py" value="84" />
           <entry key="pyi" value="1" />
         </counts>
       </usages-collector>
@@ -59,22 +49,22 @@
         <counts>
           <entry key="JSON" value="23" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="77" />
+          <entry key="Python" value="84" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="44" />
+          <entry key="dummy" value="46" />
           <entry key="json" value="132" />
-          <entry key="py" value="16637" />
+          <entry key="py" value="17607" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="132" />
-          <entry key="PLAIN_TEXT" value="44" />
-          <entry key="Python" value="16637" />
+          <entry key="PLAIN_TEXT" value="46" />
+          <entry key="Python" value="17607" />
         </counts>
       </usages-collector>
     </session>
@@ -83,106 +73,102 @@
     <favorites_list name="Spiders" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tutorial/tutorial/utils.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="318">
-                  <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
-                  <folding>
-                    <element signature="e#33#56#0" expanded="true" />
-                    <marker date="1607263294826" expanded="true" signature="962:972" ph="..." />
-                    <marker date="1607263294826" expanded="true" signature="1009:1018" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tutorial/tutorial/middlewares.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="78" column="13" selection-start-line="69" selection-start-column="12" selection-end-line="78" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#145#171#0" expanded="true" />
-                    <marker date="1607262943752" expanded="true" signature="856:11008" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="1842:1852" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="2061:2668" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="2160:2173" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="2792:2802" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="7317:7326" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="7600:7609" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="7978:7987" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="9281:9847" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="9945:9950" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="9945:9954" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="10208:10209" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="10351:10356" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="10351:10360" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="10594:10599" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="10594:10603" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="10742:10747" ph="..." />
-                    <marker date="1607262943752" expanded="true" signature="10742:10751" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuRankList.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="312">
-                  <caret line="16" column="5" selection-start-line="10" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tutorial/tutorial/pipelines.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1296">
-                  <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#238#273#0" expanded="true" />
-                    <marker date="1607167125391" expanded="true" signature="1576:1581" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuHQZX.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-290">
-                  <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#0#13#0" expanded="true" />
-                    <marker date="1607263238364" expanded="true" signature="414:3775" ph="..." />
-                    <marker date="1607263238364" expanded="true" signature="1455:1464" ph="..." />
-                    <marker date="1607263238364" expanded="true" signature="1455:1566" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tutorial/tutorial/settings.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="358">
-                  <caret line="109" column="31" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorial/tutorial/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="114" column="46" selection-start-line="114" selection-start-column="46" selection-end-line="114" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorial/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stocks/stocks/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorial/tutorial/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="24" column="17" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="17" />
+              <folding>
+                <element signature="e#33#56#0" expanded="true" />
+                <marker date="1607263294826" expanded="true" signature="962:972" ph="..." />
+                <marker date="1607263294826" expanded="true" signature="1009:1018" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorial/tutorial/middlewares.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2544">
+              <caret line="257" column="4" selection-start-line="257" selection-start-column="4" selection-end-line="257" selection-end-column="4" />
+              <folding>
+                <element signature="e#145#171#0" expanded="true" />
+                <element signature="e#2740#5424#0" />
+                <element signature="e#8518#9244#0" />
+                <element signature="e#9286#9845#0" />
+                <element signature="e#9886#10415#0" />
+                <marker date="1607348118654" expanded="true" signature="856:12837" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="1842:1852" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="2061:2668" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="2160:2173" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="2792:2802" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="7317:7326" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="7600:7609" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="7978:7987" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="9281:11676" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="10465:11676" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="11104:11256" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="11296:11297" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="11296:11453" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="11774:11779" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="11774:11783" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="12037:12038" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="12180:12185" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="12180:12189" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="12423:12428" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="12423:12432" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="12571:12576" ph="..." />
+                <marker date="1607348118654" expanded="true" signature="12571:12580" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuHQZX.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1607263238364" expanded="true" signature="414:3775" ph="..." />
+                <marker date="1607263238364" expanded="true" signature="1455:1464" ph="..." />
+                <marker date="1607263238364" expanded="true" signature="1455:1566" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -226,10 +212,11 @@
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuRankList.py" />
         <option value="$PROJECT_DIR$/tutorial/center2.json" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/pipelines.py" />
-        <option value="$PROJECT_DIR$/tutorial/tutorial/middlewares.py" />
-        <option value="$PROJECT_DIR$/tutorial/tutorial/settings.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuHQZX.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/utils.py" />
+        <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/OneStock.py" />
+        <option value="$PROJECT_DIR$/tutorial/tutorial/settings.py" />
+        <option value="$PROJECT_DIR$/tutorial/tutorial/middlewares.py" />
       </list>
     </option>
   </component>
@@ -240,8 +227,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="826" />
+    <option name="y" value="50" />
     <option name="width" value="1084" />
     <option name="height" value="994" />
   </component>
@@ -279,6 +266,17 @@
             <path>
               <item name="Spiders" type="b2602c69:ProjectViewProjectNode" />
               <item name="Spiders" type="462c0819:PsiDirectoryNode" />
+              <item name="stocks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spiders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spiders" type="462c0819:PsiDirectoryNode" />
+              <item name="stocks" type="462c0819:PsiDirectoryNode" />
+              <item name="stocks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spiders" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spiders" type="462c0819:PsiDirectoryNode" />
               <item name="tutorial" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -286,13 +284,6 @@
               <item name="Spiders" type="462c0819:PsiDirectoryNode" />
               <item name="tutorial" type="462c0819:PsiDirectoryNode" />
               <item name="tutorial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spiders" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spiders" type="462c0819:PsiDirectoryNode" />
-              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
-              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Spiders" type="b2602c69:ProjectViewProjectNode" />
@@ -317,10 +308,11 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jarvis\Desktop\万德准备\Spiders\tutorial" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jarvis\Desktop\万德准备\Spiders\stocks\stocks" />
       <recent name="C:\Users\Jarvis\Desktop\万德准备\Spiders\tutorial" />
     </key>
   </component>
@@ -432,7 +424,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15831557" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15991472" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24973205" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3290461" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -446,7 +438,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.5520607" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.17570499" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -592,13 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/tutorial/items.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -636,7 +621,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/tutorial/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1296">
+        <state relative-caret-position="144">
           <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
           <folding>
             <element signature="e#238#273#0" expanded="true" />
@@ -645,52 +630,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="109" column="31" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuRankList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="16" column="5" selection-start-line="10" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="120">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/middlewares.py">
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/OneStock.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="78" column="13" selection-start-line="69" selection-start-column="12" selection-end-line="78" selection-end-column="13" />
+        <state relative-caret-position="539">
+          <caret line="76" column="56" selection-start-line="76" selection-start-column="56" selection-end-line="76" selection-end-column="56" />
           <folding>
-            <element signature="e#145#171#0" expanded="true" />
-            <marker date="1607262943752" expanded="true" signature="856:11008" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="1842:1852" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="2061:2668" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="2160:2173" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="2792:2802" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="7317:7326" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="7600:7609" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="7978:7987" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="9281:9847" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="9945:9950" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="9945:9954" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="10208:10209" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="10351:10356" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="10351:10360" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="10594:10599" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="10594:10603" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="10742:10747" ph="..." />
-            <marker date="1607262943752" expanded="true" signature="10742:10751" ph="..." />
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1607328623869" expanded="true" signature="443:3059" ph="..." />
+            <marker date="1607328623869" expanded="true" signature="3095:3104" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/DongfangcaifuHQZX.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-290">
-          <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+        <state relative-caret-position="528">
+          <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
             <marker date="1607263238364" expanded="true" signature="414:3775" ph="..." />
@@ -702,13 +664,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/tutorial/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+        <state relative-caret-position="206">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="17" />
           <folding>
             <element signature="e#33#56#0" expanded="true" />
             <marker date="1607263294826" expanded="true" signature="962:972" ph="..." />
             <marker date="1607263294826" expanded="true" signature="1009:1018" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2544">
+          <caret line="257" column="4" selection-start-line="257" selection-start-column="4" selection-end-line="257" selection-end-column="4" />
+          <folding>
+            <element signature="e#145#171#0" expanded="true" />
+            <element signature="e#2740#5424#0" />
+            <element signature="e#8518#9244#0" />
+            <element signature="e#9286#9845#0" />
+            <element signature="e#9886#10415#0" />
+            <marker date="1607348118654" expanded="true" signature="856:12837" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="1842:1852" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="2061:2668" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="2160:2173" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="2792:2802" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="7317:7326" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="7600:7609" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="7978:7987" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="9281:11676" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="10465:11676" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="11104:11256" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="11296:11297" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="11296:11453" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="11774:11779" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="11774:11783" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="12037:12038" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="12180:12185" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="12180:12189" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="12423:12428" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="12423:12432" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="12571:12576" ph="..." />
+            <marker date="1607348118654" expanded="true" signature="12571:12580" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/tutorial/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="114" column="46" selection-start-line="114" selection-start-column="46" selection-end-line="114" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stocks/stocks/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
         </state>
       </provider>
     </entry>

@@ -112,8 +112,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # 爬虫中间件
 SPIDER_MIDDLEWARES = {
-   'tutorial.middlewares.HQZXKafkaMiddleware': 543,
-   'tutorial.middlewares.HQZXMongoMiddleware': 544,
+   'tutorial.middlewares.HQZXStorageMiddleware': 543,
+   # 'tutorial.middlewares.HQZXKafkaMiddleware': 543,
+   # 'tutorial.middlewares.HQZXMongoMiddleware': 544,
 }
 
 # 激活管道

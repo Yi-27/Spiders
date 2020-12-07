@@ -200,8 +200,8 @@ class MyDownloaderMiddleware(object):
 
 """---------------------------爬虫中间件-----------------------------"""
 class HQZXKafkaMiddleware(object):
-    
     """行情中心的数据被爬取到返回后，先通过该方法，再返回给数据库"""
+    
     def process_spider_input(self, response, spider):
         """
         这里将响应的数据中的data（每条股票的在行情中心中对应的数据）提取出来
@@ -238,6 +238,60 @@ class HQZXMongoMiddleware(object):
             data = data_dict["data"]["diff"]  # 类型是[{},{},...]
 
             collection.insert_many(data)  # 批量写入mongoDB中
+
+
+class HQZXRedisMiddleware(object):
+    """将从行情中心爬到的所有股票放进Linux中的Redis数据库中，方便之后的爬虫股票的时间信息"""
+    
+    def process_spider_input(self, response, spider):
+        if spider.name == "hangqingzhongxin":
+            redis = spider.linux_redis
+
+            res = response.text
+            data_json = res[res.find("(") + 1:-2]  # 截取字符串，方便从json字符串转换成字典
+            data_dict = json.loads(data_json)
+            data = data_dict["data"]["diff"]  # 类型是[{},{},...]
+
+            for d in data:
+                redis.sadd("stockList", {"name": d["f14"], "code": d["f12"]})  # 写入redis中
+    
+    
+class HQZXStorageMiddleware(object):
+    """将数据存储到Redis、MongoDB、Kafka中"""
+    def process_spider_input(self, response, spider):
+        if spider.name == "hangqingzhongxin":
+            redis = spider.linux_redis
+
+            res = response.text
+            data_json = res[res.find("(") + 1:-2]  # 截取字符串，方便从json字符串转换成字典
+            data_dict = json.loads(data_json)
+            data = data_dict["data"]["diff"]  # 类型是[{},{},...]
+
+            type = response.meta['_type']  # 获取类型，用于指定
+
+            self.redis_save(data, redis)
+            self.mongo_save(data, spider.mongo, type)
+            self.kafka_save(data, spider.kafka, type)
+
+    def redis_save(self, data, redis):
+        """将股票存储到Redis队列中"""
+        for d in data:
+            redis.sadd("stockList", {"name": d["f14"], "code": d["f12"]})  # 写入redis中
+        
+    def mongo_save(self, data, mongo, type):
+        # 指定数据库
+        db = mongo["hqzx"]
+        # 获取指定集合
+        collection = db[type]
+        collection.insert_many(data)  # 批量写入mongoDB中
+        
+    def kafka_save(self, data, kafka, type):
+        # 获取到一个异步生产者，用于存爬取到的数据
+        producer = kafka.get_producer(type)
+    
+        # 往kafka中写数据
+        for row in data:
+            producer.produce(json.dumps(row).encode())
 
 # 爬虫中间件模板流程
 class MySpiderMiddleware(object):
