@@ -4,9 +4,10 @@ from .settings import *
 import time
 import redis
 import pymongo
+import pymysql
 from selenium import webdriver
 from pykafka import KafkaClient
-import random
+
 
 class SeleniumUtils(object):
     
@@ -24,12 +25,22 @@ class DBUtils(object):
     @classmethod
     def get_redis(cls, *args, **kwargs):
         """返回一个redis连接"""
-        return redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT)  # 连接Redis
+        return redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD)  # 连接Redis
     
     @classmethod
     def get_mongo(cls, *args, **kwargs):
         """返回一个redis连接"""
         return pymongo.MongoClient(host=MONGODB_HOST, port=MONGODB_PORT)
+    
+    @classmethod
+    def get_mysql(cls, *args, **kwargs):
+        """返回一个redis连接"""
+        return pymysql.Connect(host=MYSQL_HOST,
+                             port=MYSQL_PORT,
+                             user=MYSQL_USERNAME,
+                             password=MYSQL_PASSWORD,
+                             database=MYSQL_DBNAME,
+                             charset='utf8',)
   
 
 # kafka相关的工具类

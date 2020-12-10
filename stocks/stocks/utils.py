@@ -4,9 +4,10 @@ from .settings import *
 import time
 import redis
 import pymongo
+import pymysql
 from selenium import webdriver
 from pykafka import KafkaClient
-import random
+
 
 class SeleniumUtils(object):
     
@@ -24,17 +25,27 @@ class DBUtils(object):
     @classmethod
     def get_redis(cls, *args, **kwargs):
         """返回一个redis连接"""
-        return redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT)  # 连接Redis
+        return redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD)  # 连接Redis
     
     @classmethod
     def get_mongo(cls, *args, **kwargs):
         """返回一个redis连接"""
         return pymongo.MongoClient(host=MONGODB_HOST, port=MONGODB_PORT)
-  
+    
+    @classmethod
+    def get_mysql(cls, *args, **kwargs):
+        """返回一个redis连接"""
+        return pymysql.Connect(host=MYSQL_HOST,
+                               port=MYSQL_PORT,
+                               user=MYSQL_USERNAME,
+                               password=MYSQL_PASSWORD,
+                               database=MYSQL_DBNAME,
+                               charset='utf8', )
+
 
 # kafka相关的工具类
 class KafkaUtils(object):
-
+    
     def __init__(self):
         # kafka连接池
         self.client = self.get_kafka()
@@ -42,7 +53,7 @@ class KafkaUtils(object):
     def get_kafka(self, *args, **kwargs):
         """创建一个kafka连接，注意这个kafka可能是个集群"""
         client = KafkaClient(hosts=",".join(KAFKA_HOSTS),
-                    zookeeper_hosts=",".join(ZOOKEEPER_HOSTS))
+                             zookeeper_hosts=",".join(ZOOKEEPER_HOSTS))
         return client
     
     def get_topic(self, topic_name):
@@ -60,8 +71,8 @@ class KafkaUtils(object):
         """返回一个异步生产者"""
         topic = self.get_topic(topic_name)
         return topic.get_producer(sync=False,
-                                        delivery_reports=True,
-                                        partitioner=lambda pid, key: pid[0])
+                                  delivery_reports=True,
+                                  partitioner=lambda pid, key: pid[0])
     
     def get_simple_consumer(self, topic_name):
         """返回一个普通的消费者，从头读到尾"""

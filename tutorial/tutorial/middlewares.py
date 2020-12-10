@@ -12,8 +12,8 @@ from collections import defaultdict
 import json
 import random
 from fake_useragent import UserAgent
-import redis
 import time
+import threading
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
@@ -152,10 +152,12 @@ class DFCFSetCookiesMiddleware(object):
         if spider.name == "hangqingzhongxin":
             redis = spider.redis
             if redis.exists("dfcfCookies"):
-                request.cookies = json.loads(redis.get("dfcfCookies").decode())  # 设置cookies
+                # request.cookies = json.loads(redis.get("dfcfCookies").decode())  # 设置cookies
+                request.headers['Cookie'] = redis.get("dfcfCookies").decode()  # 暂时先这样设置，其实应该是按上面那样设置的
             else:
-                request.headers['Cookie'] = "qgqp_b_id=498c8ab46440318862f8757ff37ca2aa; p_origin=https%3A%2F%2Fpassport2.eastmoney.com; ct=w_B6TvJKJO7UPRJ6YKT2QUw8s2AyFzSa2XMmQaZcI8BekRAwdmJOIof9H9EAka_-MiwpNVRO-PYpnfc98NRAYBqiapknw8EQxMDXtaaFEsuOitvr3E-EHHXjQbAk3POnAge6GfwVpag8aiheONdGeiIn7g65U89CTfeMaIX3eFE; ut=FobyicMgeV7bfas_M05TDBOeyCFFs48knKwC5VBjLh4OQceJBUzUsQihFbc8gUi_5OPQwgb3yLNkDoEO-0b-qSRrv6swX_WeiFe1bMQk9dFXwUVQLPPG3AI_grbg8Kj9CS-4nHIh0D7f4atKAtC1Kmm9UwSPBCwGsdrV2HUYNkfPjiQsNg0I4czRn1MDjrZ1gv79YMZPw0XXw9nQ827repkX_joNWr0srtn_aZ2Ioo3ISdXfCAjd6JJEf35rsxI805TlXeq9EmUaL4ZFQG0d-DsNYpAaNmp8; pi=6182326063031944%3bg6182326063031944%3b%e6%97%b6%e4%b8%8d%e6%88%91%e5%be%8513%3byGhidakwmMWJe8NKgZzCwcSV%2bUie8tSW4OQ%2boskTA0fAE%2fLWthaNsq%2f9Vwka5Ypb27xTmZRMn9k83a1U8QK0CHZO6aTsi2BMxLFTi7Qt3a7k4DoC7aPRL3NOCG%2bY0oFE0ZhtqKmvbJt65gslq180jNqOugSedTxQrjeC%2f%2fNLANB3RxK2tVTQRfqM5zqHEjk%2bW76tG6k2%3bxnG03MNdfN6cj9SYk9JOElakwC8Hwm5zKsKG5Mh9xjVfIly7900UONCBn1bYa%2bAbLwc0fSety6ndiLqjhSkobik70ZPzmYOrN%2bLjWcdJCh4vhE84H4r92O79MZDN4reSrR%2fcZ2nMeXqo6Qsp9ofr88bFfULYdQ%3d%3d; uidal=6182326063031944%e6%97%b6%e4%b8%8d%e6%88%91%e5%be%8513; sid=153447085; vtpst=|; testtc=0.2904408531600091; st_si=81210525039055; st_asi=delete; st_pvi=18132808206149; st_sp=2020-12-06%2020%3A23%3A41; st_inirUrl=http%3A%2F%2Fquote.eastmoney.com%2Fcenter%2F; st_sn=3; st_psi=20201206204259824-113200301321-4620583248"  # 手动设置cookies，不一定能用
-        
+                cookies = "qgqp_b_id=498c8ab46440318862f8757ff37ca2aa; em-quote-version=topspeed; ct=TsW12_qQdpEM19gtyIzscqRCcsD0XELSxOrVxh5k6fLxeXKzSlnI4X_PWNiAKPsLC6tbNkKsar68KBgD0O04sConpDu_o_SO99iMImwe2fI-OkKdBb_LqkkR4L_-522lbOoOOl2Von2gmPd4u4lzLP4Wb-K2WilpJvtBfW54nOM; ut=FobyicMgeV7bfas_M05TDBOeyCFFs48knKwC5VBjLh4OQceJBUzUsQihFbc8gUi_5OPQwgb3yLNkDoEO-0b-qSRrv6swX_WeiFe1bMQk9dFXwUVQLPPG3AI_grbg8Kj9CS-4nHIh0D7f4atKAtC1Kmm9UwSPBCwGsdrV2HUYNkfPjiQsNg0I4czRn1MDjrZ1gv79YMZPw0XXw9nQ827reuVxG7t8NnVoGT8Uy3NPk_BXeC6g9vH41S4meWl-yP5vRMwxNspw5vfq_zGoP66zm5CiLArZqWrt; pi=6182326063031944%3bg6182326063031944%3b%e6%97%b6%e4%b8%8d%e6%88%91%e5%be%8513%3bElmy3jk86IdbBrEXagIDOw5c2fjFUC8HxzUlggSXDigqDG%2fEfCVdjq4BbKQIVBziKxfVF21JdoEuk0UVewrFPXcFIi8rS5BO438uVbb0nEHjaggvC%2b%2fE%2flNEZ2W46YPWZY9vpYtBkaAKTk9B0hDbllFpOcg%2b5HQQgv3VxSVrLV0gMowrOGrZ0skiZnww2NBbw1ZxF2h4%3bGZAkM%2f3fupUnr0cFGFWL8KUvvlMhaxvjVaDweUiLGy4YNE%2f0hSlRvvjqyu7u0DlRpC%2ffZX3F5VbPu95F0fcx6wfv1Bx3PDZzFAgvtRrunYg2gefTBT9EUpYPIJSFiSvJtUPgtTDuW39ZTByzceqqVOobJJj6Gg%3d%3d; uidal=6182326063031944%e6%97%b6%e4%b8%8d%e6%88%91%e5%be%8513; sid=153447085; vtpst=|; em_hq_fls=js; cowCookie=true; HAList=a-sz-000001-%u5E73%u5B89%u94F6%u884C%2Ca-sh-600000-%u6D66%u53D1%u94F6%u884C; st_si=55807582328024; st_asi=delete; waptgshowtime=2020129; st_pvi=52532572402789; st_sp=2020-11-24%2013%3A10%3A23; st_inirUrl=https%3A%2F%2Fwww.baidu.com%2Fs; st_sn=4; st_psi=20201209135711447-113200301321-2492129783"
+                request.headers['Cookie'] = cookies  # 手动设置cookies，不一定能用
+                redis.set("dfcfCookies", cookies.encode())  # 添加进Redis中
 
 # 下载中间件模板流程
 class MyDownloaderMiddleware(object):
@@ -253,45 +255,110 @@ class HQZXRedisMiddleware(object):
             data = data_dict["data"]["diff"]  # 类型是[{},{},...]
 
             for d in data:
-                redis.sadd("stockList", {"name": d["f14"], "code": d["f12"]})  # 写入redis中
+                redis.sadd("stockList", json.dumps({"name": d["f14"], "code": d["f12"]}).encode())  # 写入redis中
     
     
 class HQZXStorageMiddleware(object):
     """将数据存储到Redis、MongoDB、Kafka中"""
     def process_spider_input(self, response, spider):
         if spider.name == "hangqingzhongxin":
-            redis = spider.linux_redis
-
             res = response.text
             data_json = res[res.find("(") + 1:-2]  # 截取字符串，方便从json字符串转换成字典
             data_dict = json.loads(data_json)
             data = data_dict["data"]["diff"]  # 类型是[{},{},...]
 
             type = response.meta['_type']  # 获取类型，用于指定
+            spider_time = response.meta['_time']
 
-            self.redis_save(data, redis)
-            self.mongo_save(data, spider.mongo, type)
-            self.kafka_save(data, spider.kafka, type)
 
-    def redis_save(self, data, redis):
-        """将股票存储到Redis队列中"""
-        for d in data:
-            redis.sadd("stockList", {"name": d["f14"], "code": d["f12"]})  # 写入redis中
+            # 使用多线程加速读取
+            t1 = threading.Thread(target=self.mysql_and_redis_save, args=(data, spider.mysql, spider.redis))
+            t2 = threading.Thread(target=self.mongo_save, args=(data, spider.mongo, type, spider_time))
+            t3 = threading.Thread(target=self.kafka_save, args=(data, spider.kafka, type, spider_time))
+            # self.mysql_and_redis_save(data, spider.mysql, spider.redis)  # 存股票代码和名字
+            # self.mongo_save(data, spider.mongo, type, spider_time)  # 存行情中心表格数据
+            # self.kafka_save(data, spider.kafka, type, spider_time)  # 存行情中心表格数据
+            
+            tlist = [t1, t2, t3]
+            for t in tlist:
+                t.start()
+            for t in tlist:
+                t.join()  # 必须要这样，防止主线程执行完后，就关闭连接了！
+
+    def mysql_and_redis_save(self, data, mysql, redis):
+        """将股票存储到Redis集合中,mysql持久化存储股票名字和代码
+            将股票的url存储到Redis集合中
         
-    def mongo_save(self, data, mongo, type):
+            这里完全不必担心会不会遗漏和重复
+            首先插入语句都保证不会重复
+            其次如果遗漏了，由于很快就会再次爬取了，因此可能下次就把遗漏的参加进去了，因此不用担心
+        """
+        cursor = mysql.cursor()
+        # stock_list_mysql = []  # 批量插入mysql的列表，
+        # stock_list_redis = []  # 批量插入redis的列表,用的时候需要转成元组
+        for d in data:
+            # 构造每条股票的URL
+            # 加入到单独股票爬取的Redis队列中
+            public_params = [
+                "ut=7eea3edcaed734bea9cbfc24409ed989",
+                "ndays=1",  # 只爬取当前一天的
+                "iscr=1",  # 也算上9点30前的十五分钟，即从9点15开始
+                "fields1=f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13",  # 这些只起到辅助作用
+                "fields2=f51,f52,f53,f54,f55,f56,f57,f58"  # 这些才是关键
+            ]
+            if int(d["f12"]) < 600000:
+                public_params.append("secid=0.%s"%d["f12"])  # 小于600000是0.开头
+            else:
+                public_params.append("secid=1.%s" % d["f12"])
+                
+            cb = "cb=jQuery1124009071583642216097_%s" % str(time.time()).replace(".", "")[:-4]
+            timestamp = "_=%s" % str(time.time()).replace(".", "")[:-4]
+            stock_url = "http://push2his.eastmoney.com/api/qt/stock/trends2/get?%s&%s&%s" % (
+                cb, '&'.join(public_params), timestamp
+            )
+            # 奖连接添加进Redis队列
+            redis.rpush("stocksURL", stock_url)
+            
+            # stock_list_mysql.append((d["f12"], d["f14"]))
+            sql = "insert ignore into `stockList`(`id`, `name`) values(%s, %s)"
+            try:
+                cursor.execute(sql, (d["f12"], d["f14"]))
+                mysql.commit()  # 提交数据库
+            except Exception as e:
+                print(e.args, "出错了")  # 打印错误信息
+                mysql.rollback()  # 事务回滚
+            # stock_list_redis.append(json.dumps({"name": d["f14"], "code": d["f12"]}).encode())
+            
+        """批量插入有问题！！！！！！！！！
+        # 批量插入mysql中
+        # 先构建sql
+        # sql = "insert ignore into `stockList`(`id`, `name`) values(%s%s)"%("%s,"*(len(stock_list_mysql)-1), "%s")
+        try:
+            cursor.executemany(sql, stock_list_mysql)
+            mysql.commit()  # 提交数据库
+        except Exception as e:
+            print(e.args, len(tuple(stock_list_mysql)))  # 打印错误信息
+            mysql.rollback()  # 事务回滚
+        """
+        
+        # 批量写入redis集合中
+        # redis.sadd("stockList", *tuple(stock_list_redis))  # 注意这里的 * 运算符，它是先将这个元组拆开，而sadd方法是 *value，等于会又把他们合并在了一起
+        
+        # 添加结束释放游标
+        cursor.close()
+        
+    def mongo_save(self, data, mongo, type, spider_time):
         # 指定数据库
-        db = mongo["hqzx"]
+        db = mongo[type]
         # 获取指定集合
-        collection = db[type]
+        collection = db[spider_time]
         collection.insert_many(data)  # 批量写入mongoDB中
         
-    def kafka_save(self, data, kafka, type):
+    def kafka_save(self, data, kafka, type, spider_time):
         # 获取到一个异步生产者，用于存爬取到的数据
-        producer = kafka.get_producer(type)
-    
-        # 往kafka中写数据
-        for row in data:
-            producer.produce(json.dumps(row).encode())
+        producer = kafka.get_producer(type)  # 比如 shangzheng
+        data_dict = {"time": spider_time, "data": data}
+        producer.produce(json.dumps(data_dict).encode())
 
 # 爬虫中间件模板流程
 class MySpiderMiddleware(object):
